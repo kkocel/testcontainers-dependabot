@@ -1,0 +1,27 @@
+name: Run build
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'gradle'
+      - uses: gradle/actions/setup-gradle@v4
+      - run: ./gradlew build integrationTest
+
+      - name: Archive results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: |
+            pitstop/build/reports
+            common/build/reports
+            successfactors/build/reports
+          retention-days: 5
