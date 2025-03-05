@@ -24,7 +24,5 @@ jobs:
         with:
           name: test-report
           path: |
-            pitstop/build/reports
-            common/build/reports
-            successfactors/build/reports
+            build/reports
           retention-days: 5
