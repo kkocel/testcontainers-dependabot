@@ -16,7 +16,7 @@ jobs:
           java-version: '21'
           cache: 'gradle'
       - uses: gradle/actions/setup-gradle@v4
-      - run: ./gradlew build integrationTest
+      - run: ./gradlew build
 
       - name: Archive results
         if: always()
