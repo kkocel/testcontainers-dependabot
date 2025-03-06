@@ -7,6 +7,6 @@ updates:
       interval: "daily"
 
   - package-ecosystem: docker
-    directory: "/src/test/resources/Dockerfile"
+    directory: "/src/test/resources"
     schedule:
       interval: daily
