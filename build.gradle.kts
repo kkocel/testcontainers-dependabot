@@ -26,7 +26,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-testcontainers")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testImplementation("org.testcontainers:junit-jupiter")
-    testImplementation("org.testcontainers:localstack:1.20.6")
+    testImplementation("org.testcontainers:localstack:1.21.0")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
